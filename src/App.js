@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
-import Disease from "./components/Disease";
+import DiseaseForm from "./components/DiseaseForm";
+import MixtureForm from "./components/MixtureForm";
 
 class App extends Component {
     render() {
@@ -9,7 +10,8 @@ class App extends Component {
                 <div>
                     Заболевание
                 </div>
-                <Disease/>
+                <DiseaseForm/>
+                <MixtureForm/>
             </div>
         );
     }
