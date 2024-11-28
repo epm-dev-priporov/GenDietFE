@@ -7,28 +7,26 @@ import {observer} from "mobx-react-lite";
 let client = new Client();
 
 export const DiseaseForm = observer(() => {
-    const fun = (value) => {
+    const selectDisease = (data, value) => {
 
+        if (value == null) {
+            return
+        }
         let mixtures = data
             .filter(it => it.name === value)
-            .flatMap(i => i.mixtures.map( it => it.name))
-        console.log(mixtures)
+            .flatMap(i => i.mixtures.map(it => it.name))
+
         setMixtures(mixtures)
-
-        let mixtureObjectList = data
-            .filter(i => i.name === value)
-            .flatMap(i => i.mixtures.map( it => {
-                it.id, it.name
-            }))
-
     }
 
-    let {diseases,  data, setData, setDiseases, setMixtures} = MixtureStore;
+    let {diseases, data, setData, setDiseases, setMixtures} = MixtureStore;
     useEffect(() => {
         client.get("disease").then(
             (value) => {
                 setData(value)
-                setDiseases(value.map(i => i.name))
+                let diseasList = value.map(i => i.name);
+                setDiseases(diseasList)
+                selectDisease(value, diseasList[0])
             }
         ).catch((error) => {
             console.log(error);
@@ -37,7 +35,9 @@ export const DiseaseForm = observer(() => {
 
     let names = diseases.map((value, index) => <option key={index}>{value}</option>)
 
-    return <Form.Select onChange={it => fun(it.target.value)}>
+
+    return <Form.Select
+        onChange={it => selectDisease(data, it.target.value)}>
         {names}
     </Form.Select>
 })

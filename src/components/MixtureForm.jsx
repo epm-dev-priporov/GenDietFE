@@ -8,7 +8,7 @@ import {toJS} from "mobx";
 let client = new Client();
 
 export const MixtureForm = observer(() => {
-    let { mixtures} = MixtureStore;
+    let {mixtures} = MixtureStore;
 
     let toOptionKey = (value) => {
         return value.map(it => <option key={it}>{it}</option>)
