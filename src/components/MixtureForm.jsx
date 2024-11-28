@@ -8,13 +8,15 @@ import {toJS} from "mobx";
 let client = new Client();
 
 export const MixtureForm = observer(() => {
-    let {mixtures} = MixtureStore;
-
+    let {mixtures, setTargetMixture} = MixtureStore;
+    let selectMixture = (value) => {
+        setTargetMixture(value)
+    }
     let toOptionKey = (value) => {
         return value.map(it => <option key={it}>{it}</option>)
     }
 
-    return <Form.Select>
+    return <Form.Select onChange={ (it) => {selectMixture(it.target.value)}}>
         {toOptionKey(toJS(mixtures))}
     </Form.Select>
 })
