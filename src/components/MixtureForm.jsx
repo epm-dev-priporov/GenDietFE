@@ -1,6 +1,5 @@
 import React from 'react';
 import Form from "react-bootstrap/Form";
-import Client from "../client/Client.js"
 import MixtureStore from "../store/AppStore";
 import {observer} from "mobx-react-lite";
 import {toJS} from "mobx";

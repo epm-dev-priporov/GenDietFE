@@ -5,6 +5,7 @@ import MixtureForm from "./components/MixtureForm";
 import AgeTextForm from "./components/AgeTextForm";
 import WeightTextForm from "./components/WeightTextForm";
 import CalculateButton from "./components/CalculateButton";
+import {ResultForm} from "./components/ResultForm";
 
 class App extends Component {
     render() {
@@ -16,6 +17,9 @@ class App extends Component {
                 <WeightTextForm/>
                 <div>
                     <CalculateButton/>
+                </div>
+                <div>
+                    <ResultForm/>
                 </div>
             </div>
         );
