@@ -2,22 +2,22 @@ import Form from "react-bootstrap/Form";
 import {observer} from "mobx-react-lite";
 import AppStore from "../store/AppStore";
 
-export const AgeTextForm = observer(() => {
-    let {setAge} = AppStore;
+export const BirthDayTextForm = observer(() => {
+    let {setBirthDay} = AppStore;
     const handlePressedKey = () =>  {
 
     }
-    const setNewAge = (it) =>  {
+    const setNewBirthDay = (it) =>  {
         let age = it.target.value;
         console.log("age = ", age)
-        setAge(age)
+        setBirthDay(age)
     }
 
     return <div>
-        Возраст
-        <Form.Control onKeyDown={handlePressedKey} onChange={setNewAge}/>
-        лет
+        День рождения
+        <Form.Control onKeyDown={handlePressedKey} onChange={setNewBirthDay}/>
+         формат (yyyy-MM-dd). Пример; 2000-01-01
     </div>
 });
 
-export default AgeTextForm;
+export default BirthDayTextForm;

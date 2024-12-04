@@ -4,18 +4,18 @@ import AppStore from "../store/AppStore";
 import client from "../client/Client";
 
 const CalculateButton = observer(() => {
-    let {mixtureId, weight, age, setResult} = AppStore;
+    let {mixtureId, weight, birthDay, setResult} = AppStore;
     const handle = () => {
         console.log("mixtureId = ", mixtureId)
         let data = {
             "weight": weight,
             "mixtureId": mixtureId,
-            "age": age
+            "birthDay": birthDay
         }
 
         client.post("calculation", data).then(response => {
             console.log(response);
-            setResult(response.result)
+            setResult(response)
         }).catch((error) => {
             console.log(error);
         });

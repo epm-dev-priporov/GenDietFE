@@ -7,11 +7,11 @@ class AppStore {
     targetDisease = ""
     targetMixture = ""
     weight = 0
-    age = 0
-    result = 0
+    birthDay = ""
+    result = []
 
     setWeight = it => {this.weight = it}
-    setAge = it => {this.age = it}
+    setBirthDay = it => {this.birthDay = it}
     setData = it => {this.data = it}
     setMixtures = it => {this.mixtures = it}
     setDiseases = it => {this.diseases = it}
