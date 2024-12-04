@@ -11,17 +11,20 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <DiseaseForm/>
-                <MixtureForm/>
-                <AgeTextForm/>
-                <WeightTextForm/>
-                <div>
-                    <CalculateButton/>
+                <div className="grid-container">
+                    <DiseaseForm/>
+                    <MixtureForm/>
+                    <AgeTextForm/>
+                    <WeightTextForm/>
+                    <div>
+                        <CalculateButton/>
+                    </div>
                 </div>
-                <div>
+                <div className="result">
                     <ResultForm/>
                 </div>
             </div>
+
         );
     }
 }
