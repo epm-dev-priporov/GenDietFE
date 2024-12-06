@@ -4,12 +4,14 @@ class AppStore {
     mixtures = []
     data = []
     diseases = []
+    sex = "M"
     targetDisease = ""
     targetMixture = ""
     weight = 0
     birthDay = ""
     result = []
 
+    setSex = it => {this.sex = it}
     setWeight = it => {this.weight = it}
     setBirthDay = it => {this.birthDay = it}
     setData = it => {this.data = it}

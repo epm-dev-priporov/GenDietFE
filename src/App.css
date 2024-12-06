@@ -23,6 +23,13 @@
   to { transform: rotate(360deg); }
 }
 
+.weight-sex-form {
+  display: flex;
+}
+.weight-sex-header {
+  display: flex;
+}
+
 .disease-form {
   margin-top: 5px;
 }
@@ -31,6 +38,14 @@
 }
 .weight-form {
   margin-top: 5px;
+  align-content: center;
+}
+.sex-element {
+  margin-top: 0px;
+  margin-left: 15px;
+}
+.sex-form {
+  margin-top: 6px;
 }
 
 .grid-container {

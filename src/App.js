@@ -6,6 +6,7 @@ import AgeTextForm from "./components/BirthDayPickerForm";
 import WeightTextForm from "./components/WeightTextForm";
 import CalculateButton from "./components/CalculateButton";
 import {ResultForm} from "./components/ResultForm";
+import SexForm from "./components/SexForm";
 
 class App extends Component {
     render() {
@@ -15,7 +16,10 @@ class App extends Component {
                     <DiseaseForm/>
                     <MixtureForm/>
                     <AgeTextForm/>
-                    <WeightTextForm/>
+                    <div className={"weight-sex-header"}>
+                        <WeightTextForm/>
+                        <SexForm className={"weight-form"}/>
+                    </div>
                     <div>
                         <CalculateButton/>
                     </div>
