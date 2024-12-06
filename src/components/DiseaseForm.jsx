@@ -37,8 +37,8 @@ export const DiseaseForm = observer(() => {
     let names = diseases.map((value, index) => <option key={index}>{value}</option>)
 
     return <div>
-        Заболевание
-        <Form.Select
+        <div>Заболевание</div>
+        <Form.Select className={"disease-form"}
             onChange={it => selectDisease(data, it.target.value)}>
             {names}
         </Form.Select>

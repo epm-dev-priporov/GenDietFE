@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import DiseaseForm from "./components/DiseaseForm";
 import MixtureForm from "./components/MixtureForm";
-import AgeTextForm from "./components/AgeTextForm";
+import AgeTextForm from "./components/BirthDayPickerForm";
 import WeightTextForm from "./components/WeightTextForm";
 import CalculateButton from "./components/CalculateButton";
 import {ResultForm} from "./components/ResultForm";

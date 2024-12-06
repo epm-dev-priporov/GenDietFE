@@ -4,10 +4,9 @@ import {toJS} from "mobx";
 
 export const ResultForm = observer(()=>{
     let {result} = AppStore;
-    let list = toJS(result).map((value, index)=> <div>{value}</div>)
-    console.log("list = ", list)
+    let list = toJS(result).map((value, index)=> <div key={index}>{value}</div>)
+
     return <div>
-        Результат:
         <div>
             {list}
         </div>

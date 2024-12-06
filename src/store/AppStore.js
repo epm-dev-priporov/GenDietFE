@@ -28,9 +28,13 @@ class AppStore {
     get mixtureId(){
         let disease = toJS(this.data)
             .find(it => it.name === this.targetDisease)
+
+        console.log("calc disease = ", disease);
         if(disease != null){
-            return disease.mixtures
-                .find(it => it.name === this.targetMixture).id
+            let id = disease.mixtures
+                .find(it => it.name === this.targetMixture).id;
+            console.log("calc mixtureId = ", id);
+            return id
         }
         return null
     }

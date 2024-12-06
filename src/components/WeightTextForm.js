@@ -14,9 +14,8 @@ export const WeightTextForm = observer(() => {
     }
 
     return <div>
-        Вес
-        <Form.Control onKeyDown={handePressedKey} onChange={setNewWeight}/>
-        кг
+        <div> Вес (кг)</div>
+        <Form.Control className={"weight-form"} onKeyDown={handePressedKey} onChange={setNewWeight}/>
     </div>
 });
 
